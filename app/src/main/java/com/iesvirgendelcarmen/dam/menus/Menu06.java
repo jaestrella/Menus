@@ -24,8 +24,7 @@ public class Menu06 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu06);
-        String[] datos =
-                new String[]{"OPCIÓN DE MENÚ A","OPCIÓN DE MENÚ B","OPCIÓN DE MENÚ C","OPCIÓN DE MENÚ D","OPCIÓN DE MENÚ E"};
+        String[] datos = new String[]{"OPCIÓN DE MENÚ A","OPCIÓN DE MENÚ B","OPCIÓN DE MENÚ C","OPCIÓN DE MENÚ D","OPCIÓN DE MENÚ E"};
         etiqueta = (TextView)findViewById(R.id.mensaje);
         respuesta= (TextView)findViewById(R.id.respuesta);
         lista = (ListView)findViewById(R.id.listado);
@@ -34,16 +33,14 @@ public class Menu06 extends AppCompatActivity {
         lista.setAdapter(adaptador);
         registerForContextMenu(etiqueta);
         registerForContextMenu(lista);
- }
+    }
         @Override
-
         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
             super.onCreateContextMenu(menu, v, menuInfo);
             MenuInflater inflater = getMenuInflater();
             if(v.getId() == R.id.mensaje)
                 inflater.inflate(R.menu.menu06, menu);
-            else if(v.getId() == R.id.listado)
-            {
+            else if(v.getId() == R.id.listado) {
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
                 menu.setHeaderTitle(lista.getAdapter().getItem(info.position).toString());
                 switch (info.position) {
@@ -67,11 +64,10 @@ public class Menu06 extends AppCompatActivity {
         }
         @Override
         public boolean onContextItemSelected(MenuItem item) {
-            AdapterView.AdapterContextMenuInfo info =
-                    (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
             switch (item.getItemId()) {
                 case R.id.Opc1:
-                    respuesta.setText("Etiqueta: OPCIÓN A PULSADA");
+                    respuesta.setText("Etiqueta: OPCION A PULSADA");
                     return true;
                 case R.id.Opc2:
                     respuesta.setText("Etiqueta: OPCIÓN B PULSADA");
@@ -113,5 +109,5 @@ public class Menu06 extends AppCompatActivity {
                     return super.onContextItemSelected(item);
             }
         }
-    }
+}
 

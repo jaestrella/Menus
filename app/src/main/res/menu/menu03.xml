@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/MnuOpc1"
+        android:title="Opción de menú a"
+        android:icon="@android:drawable/ic_menu_preferences">
+        <menu>
+            <item
+                android:id="@+id/SubMnuOpa1"
+                android:title="Opcion A.1"/>
+
+            <item
+                android:id="@+id/SubMnuOpa2"
+                android:title="Opcion A.1"/>
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/MnuOpc2"
+        android:title="Opción de menú b"
+        android:icon="@android:drawable/ic_menu_compass">
+        <menu>
+            <item
+                android:id="@+id/SubMnuOpb1"
+                android:title="Opcion B.1"/>
+
+            <item
+                android:id="@+id/SubMnuOpb2"
+                android:title="Opcion B.2"/>
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/MnuOpc3"
+        android:title="Opción de menú c"
+        android:icon="@android:drawable/ic_menu_agenda">
+        <menu>
+            <item
+                android:id="@+id/SubMnuOpc1"
+                android:title="Opcion C.1"/>
+
+            <item
+                android:id="@+id/SubMnuOpc2"
+                android:title="Opcion C.2"/>
+
+        </menu>
+    </item>
+
+</menu>
